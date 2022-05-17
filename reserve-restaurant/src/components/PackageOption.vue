@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row my-5 py-5">
         <div class="col-xl-7 align-self-center mb-3">
-            <h3>Our Packages</h3>
+            <h3 class="text-uppercase">Our Packages</h3>
             <p>
                 Beberapa pilihan paket atau packages yang dapat dipilih menyesuaikan kebutuhan pengunjung !
             </p>
