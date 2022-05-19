@@ -13,6 +13,35 @@ const routes = [
     path: '/form-reservation',
     name: 'form-reservation',
     component: () => import('@/views/FormReservation.vue')
+  },
+  {
+    path: '/completed',
+    name: 'completed',
+    component: () => import('@/views/CompletedView.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('@/views/ContactView.vue')
+  },
+  {
+    path: '/news',
+    component: () => import('@/layout/NewsLayout.vue'),
+    meta: {
+      auth: true,
+    },
+    children: [
+      {
+        path: "",
+        name: "News",
+        component: () => import('@/views/NewsView.vue'),
+      },
+      {
+        path: ":title",
+        name: "DetailNewsView",
+        component: () => import('@/views/DetailNewsView.vue'),
+      },
+    ],
   }
 ]
 

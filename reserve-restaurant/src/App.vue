@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <NavBar/>
     <v-main>
       <router-view/>
     </v-main>
@@ -8,15 +7,24 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue"
 export default {
   name: 'App',
-  components: {
-    NavBar
-  },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
+
+<style>
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"),
+    url(@/assets/fonts/Nunito-Regular.ttf) format("truetype");
+}
+.color-base {
+  background-color: #3C3B50;
+}
+.btn-base {
+  color: #fff !important;
+  background-color: #3C3B50 !important;
+  border-color: #3C3B50 !important;
+  border-radius: 20px !important;
+}
+</style>
