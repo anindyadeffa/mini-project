@@ -24,12 +24,9 @@
               <b-form-timepicker id="timepicker" v-model="form.time"></b-form-timepicker>
           </b-form-group>
 
-          <b-button type="submit" class="mt-5" variant="primary">Submit</b-button>
+          <b-button type="submit" class="btn-base text-uppercase px-5">Submit</b-button>
         </b-form>
     </div>
-    <!-- <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
-    </b-card> -->
   </div>
 </div>
 </template>
@@ -54,11 +51,10 @@ export default {
       // atributtes
 			const name = this.form.name;
 			const email = this.form.email;
-      const type = this.form.type;
+			const type = this.form.type;
 			const date = this.form.date;
 			const time = this.form.time;
 
-			/* insert to database */
       await this.$apollo.mutate({
         mutation: ADD_RESERVATION,
         variables: {
@@ -68,9 +64,9 @@ export default {
           date,
           time,
         },
-      });
+			});
 			this.$router.push({ path: "/completed" });
-		}
+		},
   },
 }
 </script>

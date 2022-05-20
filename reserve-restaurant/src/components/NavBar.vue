@@ -11,10 +11,13 @@
     <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="/">Home</b-nav-item>
-          <b-nav-item href="#">Package</b-nav-item>
-          <b-nav-item href="/news">News</b-nav-item>
-          <b-nav-item href="/contact">Contact</b-nav-item>
+          <b-nav-item class="mt-2" href="/">Home</b-nav-item>
+          <b-nav-item class="mt-2" href="/package">Package</b-nav-item>
+          <b-nav-item class="mt-2" href="/news">News</b-nav-item>
+          <b-nav-item class="mt-2" href="/contact">Contact</b-nav-item>
+          <b-nav-item href="/login">
+            <b-button type="submit" class="btn-base btn-login">Login</b-button>
+          </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -30,5 +33,8 @@
 <style scoped>
 .nav-item {
   margin: 0 15px 0 15px;
+}
+.btn-login {
+  size: 10%;
 }
 </style>

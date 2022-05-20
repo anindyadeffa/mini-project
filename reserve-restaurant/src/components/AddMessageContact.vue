@@ -49,8 +49,7 @@ export default {
 			const name = this.contact.name;
 			const email = this.contact.email;
       const message = this.contact.message;
-
-			/* insert to database */
+      
       await this.$apollo.mutate({
         mutation: ADD_MESSAGE,
         variables: {  
