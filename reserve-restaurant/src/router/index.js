@@ -23,10 +23,6 @@ const routes = [
     path: '/form-reservation',
     name: 'form-reservation',
     component: () => import('@/views/FormReservation.vue')
-<<<<<<< Updated upstream
-  }
-=======
-  },
   {
     path: '/completed',
     name: 'completed',
@@ -82,7 +78,6 @@ const routes = [
       },
     ]
   },
->>>>>>> Stashed changes
 ]
 
 const router = new VueRouter({

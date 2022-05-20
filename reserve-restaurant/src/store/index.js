@@ -1,17 +1,21 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
-Vue.use(Vuex)
+import news from "./news.js";
+
+Vue.use(Vuex);
+
+const persistedDataState = createPersistedState({
+  paths: ["news", "kategori"],
+});
 
 export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+  plugins: [persistedDataState],
   modules: {
-  }
-})
+    news: {
+      namespaced: true,
+      ...news,
+    },
+  },
+});
