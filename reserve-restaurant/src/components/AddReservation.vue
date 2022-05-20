@@ -3,7 +3,7 @@
     <h3 class="text-center my-5">Form Reservations</h3>
     <div class="container">
       <div class="card shadow p-5 m-5">
-        <b-form @submit.prevent="submit" method="POST">
+        <b-form @submit.prevent="reservation" method="POST">
           <b-form-group class="my-3" label="Your Name :">
             <b-form-input id="input-name" v-model="form.name" placeholder="Enter Your name" required></b-form-input>
           </b-form-group>
@@ -13,7 +13,7 @@
           </b-form-group>
 
           <b-form-group class="my-3" label="Package :">
-              <b-form-select v-model="form.package" :options="options" required></b-form-select>
+            <b-form-input id="input-package" v-model="form.type" type="text" placeholder="Enter Your Package" required></b-form-input>
           </b-form-group>
 
           <b-form-group class="my-3" for="datepicker" label="Choose a date">
@@ -24,12 +24,9 @@
               <b-form-timepicker id="timepicker" v-model="form.time"></b-form-timepicker>
           </b-form-group>
 
-          <b-button type="submit" @click="submit" v-on:click="submitAlert" class="mt-5" variant="primary">Submit</b-button>
+          <b-button type="submit" class="btn-base text-uppercase px-5">Submit</b-button>
         </b-form>
     </div>
-    <!-- <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
-    </b-card> -->
   </div>
 </div>
 </template>
@@ -43,63 +40,33 @@ export default {
         form: {
             name: "",
             email: "",
-            package: null,
+            type: "",
             date: "",
             time: "",
         },
-        options: [
-            { value: null, text: 'Please select one package' },
-            { value: 'Private Package', text: 'Private Package (2-5 Pax)' },
-            { value: 'Family Package', text: 'Family Package (6-10 Pax)' },
-            { value: 'Gathering Package', text: 'Gathering Package (11-20 Pax)' }
-        ],
     }
   },
   methods: {
-    submit() {
-      const { name, email, options, date, time } = this.$data;
-      this.$apollo.mutate({
+		async reservation() {
+      // atributtes
+			const name = this.form.name;
+			const email = this.form.email;
+			const type = this.form.type;
+			const date = this.form.date;
+			const time = this.form.time;
+
+			await this.$apollo.mutate({
         mutation: ADD_RESERVATION,
         variables: {
           name,
           email,
-          options,
+          type,
           date,
-          time
+          time,
         },
-        refetchQueries: ["getReservation"]
-      });
-      this.form.name = "";
-      this.form.email = "";
-      this.form.package = "";
-      this.form.date = "";
-      this.form.time = "";
-    },
-    submitAlert: () => {
-        alert('Reservation Sucessfully, For more information, will be contacted by our customer services !')
-    }
+			});
+			this.$router.push({ path: "/completed" });
+		},
   },
-//   methods: {
-// 		async reservation() {
-//       // atributtes
-// 			const name = this.form.name;
-// 			const email = this.form.email;
-// 			const package = this.form.package;
-// 			const date = this.form.date;
-// 			const time = this.form.time;
-
-// 			await this.$apollo.mutate({
-//         mutation: ADD_RESERVATION,
-//         variables: {
-//           name,
-//           email,
-//           package,
-//           date,
-//           time,
-//         },
-// 			});
-// 			this.$router.push({ path: "/" });
-// 		},
-//   },
 }
 </script>
