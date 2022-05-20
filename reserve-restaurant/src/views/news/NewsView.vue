@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-5 pt-5">
+  <div class="my-5">
     <nav-bar/>
     <div class="news-wrapper">
-      <h1 class="text-center text-uppercase">News</h1>
+      <h3 class="text-center text-uppercase my-5">News</h3>
       <ItemNews
         v-for="(data, index) in getNewsFromState"
         :key="index"
