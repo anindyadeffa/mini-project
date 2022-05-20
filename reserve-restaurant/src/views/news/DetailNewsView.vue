@@ -1,7 +1,8 @@
 <template>
-<div class="">
+<div class=" my-5">
   <nav-bar/>
   <div class="news-wrapper">
+    <h3 class="text-center text-uppercase my-5">Detail News</h3>
     <DetailItemNews :news="detailNews"/>
   </div>
   <footer-home/>

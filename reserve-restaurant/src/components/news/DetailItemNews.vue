@@ -1,14 +1,24 @@
 <template>
-  <div class="item">
-    <img :src="news.urlToImage" />
-    <div class="title font-weight-bold text-center">{{ news.title }}</div>
-    <div class="author">{{ news.author }}</div>
-    <div class="date-time">{{ news.publishedAt }}</div>
-    <div class="content">{{ news.content }}</div>
-    <div class="url">
-      <p>Lanjutkan baca ke: <a target="_blank" :href="news.url">Sini</a></p>
+  <div class="">
+    <div class="container">
+      <div class="card p-5">
+        <div class="row">
+          <h5 class="text-uppercase font-weight-bold">{{ news.title }}</h5>
+          <p class="">{{ news.author }}</p>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <img :src="news.urlToImage" class="w-50">
+          </div>
+        </div>
+        <div class="row">
+          <p class="font-weifh-bold">{{ news.content }}</p>
+        </div>
+        <a class="" :href="news.url">
+          <button class="btn-base text-uppercase p-2 px-5">View News</button>
+        </a>
+      </div>
     </div>
-    <router-link :to="{ path: '/' }" tag="button">Kembali</router-link>
   </div>
 </template>
 
