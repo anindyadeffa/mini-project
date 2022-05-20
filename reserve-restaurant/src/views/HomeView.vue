@@ -2,7 +2,7 @@
   <div>
       <banner-home/>
       <div class="container">
-        <package-option/>
+        <package-home/>
       </div>
       <footer-home/>
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 import BannerHome from '@/components/BannerHome.vue'
-import PackageOption from '@/components/PackageOption.vue'
+import PackageHome from '@/components/PackageHome.vue'
 import FooterHome from '@/components/FooterHome.vue'
 
   export default {
@@ -18,8 +18,8 @@ import FooterHome from '@/components/FooterHome.vue'
 
     components: {
       BannerHome,
-      PackageOption,
+      PackageHome,
       FooterHome,
     },
-  }
+  };
 </script>
