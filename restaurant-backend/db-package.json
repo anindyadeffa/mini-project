@@ -1,0 +1,28 @@
+{
+  "packages": [
+    {
+      "id": 1,
+      "name_package": "Private Package",
+      "pax": "2 - 5 Person",
+      "payment": "Offline Payment",
+      "img": "1.png"
+    },
+    {
+      "id": 2,
+      "name_package": "Family Package",
+      "pax": "6 - 10 Person",
+      "payment": "Offline Payment",
+      "img": "2.png"
+    },
+    {
+      "id": 3,
+      "name_package": "Gathering Package",
+      "pax": "11 - 20 Person",
+      "payment": "Offline Payment",
+      "img": "3.png"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
