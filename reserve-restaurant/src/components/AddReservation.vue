@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h3 class="text-center my-5">Form Reservations</h3>
+    <h3 class="text-center text-uppercase my-5">Form Reservations</h3>
     <div class="container">
       <div class="card shadow p-5 m-5">
         <b-form @submit.prevent="reservation" method="POST">
@@ -13,7 +13,7 @@
           </b-form-group>
 
           <b-form-group class="my-3" label="Package :">
-            <b-form-input id="input-package" v-model="form.type" type="text" placeholder="Enter Your Package" required></b-form-input>
+            <b-form-input id="input-type" v-model="form.type" placeholder="Enter Your Package's Option" required></b-form-input>
           </b-form-group>
 
           <b-form-group class="my-3" for="datepicker" label="Choose a date">
@@ -55,7 +55,7 @@ export default {
 			const date = this.form.date;
 			const time = this.form.time;
 
-			await this.$apollo.mutate({
+      await this.$apollo.mutate({
         mutation: ADD_RESERVATION,
         variables: {
           name,

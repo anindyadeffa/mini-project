@@ -1,22 +1,18 @@
 import gql from "graphql-tag";
 
-export const ADD_RESERVATION = gql`
-	mutation insertReservation(
+export const ADD_MESSAGE = gql`
+	mutation insertContact(
 		$name: String!
 		$email: String!
-		$type: String!
-		$date: date!
-		$time: time!
+		$message: String!
 	)
     {
-		insert_reservation(
+		insert_contact(
 			objects: [
 				{
 					name: $name
 					email: $email
-					type: $type
-					date: $date
-					time: $time
+					message: $message
 				}
 			]
 		) {

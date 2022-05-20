@@ -2,23 +2,23 @@
   <div>
     <nav-bar/>
       <div class="container">
-        <add-reservation/>
+        <Completed/>
       </div>
-      <footer-home/>
+    <footer-home/>
   </div>
 </template>
 
 <script>
-import AddReservation from '@/components/AddReservation.vue'
+import Completed from '@/components/CompletedPage.vue'
 import NavBar from '@/components/NavBar.vue'
 import FooterHome from '@/components/FooterHome.vue'
 
   export default {
-    name: 'HomeView',
+    name: 'CompletedView',
 
     components: {
+      Completed,
       NavBar,
-      AddReservation,
       FooterHome,
     },
   }
