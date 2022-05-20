@@ -8,15 +8,18 @@
 
     <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
 
-    <!-- <b-collapse id="nav-collapse" is-nav> -->
+    <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
-        <!-- <b-navbar-nav class="ml-auto">
-          <b-nav-item href="/">Home</b-nav-item>
-          <b-nav-item href="#">Package</b-nav-item>
-          <b-nav-item href="#">News</b-nav-item>
-          <b-nav-item href="#">Contact</b-nav-item>
-        </b-navbar-nav> -->
-      <!-- </b-collapse> -->
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item class="mt-2" href="/">Home</b-nav-item>
+          <b-nav-item class="mt-2" href="#">Package</b-nav-item>
+          <b-nav-item class="mt-2" href="/news">News</b-nav-item>
+          <b-nav-item class="mt-2" href="/contact">Contact</b-nav-item>
+          <b-nav-item href="/login">
+            <b-button type="submit" class="btn-base btn-login">Login</b-button>
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
     </b-container>
   </b-navbar>
 </template>
@@ -30,5 +33,8 @@
 <style scoped>
 .nav-item {
   margin: 0 15px 0 15px;
+}
+.btn-login {
+  size: 10%;
 }
 </style>
