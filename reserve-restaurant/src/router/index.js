@@ -23,6 +23,7 @@ const routes = [
     path: '/form-reservation',
     name: 'form-reservation',
     component: () => import('@/views/FormReservation.vue')
+  },
   {
     path: '/completed',
     name: 'completed',
