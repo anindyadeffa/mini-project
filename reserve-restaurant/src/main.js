@@ -4,7 +4,7 @@ import router from './router'
 import VueRouter from 'vue-router'
 import vuetify from './plugins/vuetify'
 import store from './store'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin, DropdownPlugin } from 'bootstrap-vue'
 import VueApollo from 'vue-apollo'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
@@ -35,6 +35,7 @@ const apolloProvider = new VueApollo({
   defaultClient: apolloClient
 })
 
+Vue.use(DropdownPlugin)
 Vue.use(BootstrapVue) // Make BootstrapVue available throughout the project
 Vue.use(IconsPlugin) // Optionally install the BootstrapVue icon components plugin
 Vue.use(VueRouter)
