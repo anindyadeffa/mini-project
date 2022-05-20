@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name_package": "Private Package",
+      "desc" : "Private Package, this package provides a special place for someone who needs privacy and more quality time.",
       "pax": "2 - 5 Person",
       "payment": "Offline Payment",
       "img": "1.png"
@@ -10,6 +11,7 @@
     {
       "id": 2,
       "name_package": "Family Package",
+      "desc" : "Family Package, this package provides a special place for someone who wants to gather with family and enjoy time together.",
       "pax": "6 - 10 Person",
       "payment": "Offline Payment",
       "img": "2.png"
@@ -17,6 +19,7 @@
     {
       "id": 3,
       "name_package": "Gathering Package",
+      "desc" : "Gathering Package, this package provides a special place for someone who wants to gather with family, colleagues, or friends in large numbers, making it a special place where everyone can gather together.",
       "pax": "11 - 20 Person",
       "payment": "Offline Payment",
       "img": "3.png"

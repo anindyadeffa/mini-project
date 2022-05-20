@@ -11,8 +11,8 @@
             </div>
         </div>
         <div class="row my-3">
-            <div class="col-md-4 p-5" v-for="data in packages" :key='data.id'>
-                <ItemPackage :data="data"/>
+            <div class="col-md-4 p-5" v-for="paket in packages" :key='paket.id'>
+                <ItemPackage :paket="paket"/>
             </div>
         </div>
     </div>
